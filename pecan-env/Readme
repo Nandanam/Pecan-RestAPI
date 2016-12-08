@@ -6,4 +6,4 @@ Steps to run the program:
 3)  go to test_project directory
 4)  pecan serve config.py (To start the server)
 5)  At client side (postman) choose operations like Get,Put,Post and delete
-6)  In the address bar "http://localhost:8080/univ/register?name= &email= &age= &sex= &branch=" to request the server.
+6)  In the address bar "http://127.0.0.1:8080/univ/register?name= &email= &age= &sex= &branch=" to request the server.
