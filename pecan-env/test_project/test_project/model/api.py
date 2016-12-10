@@ -6,7 +6,7 @@ def __session_for_read():
 def __session_for_write():
     return enginefacade.writer.using(_CONTEXT)
 def get_student_details():"""
-import MySQLdb as db
+""""import MySQLdb as db
 
 def db_register(sid,name,email,age,sex,branch):
     con = db.connect(db='uni300')
@@ -15,7 +15,8 @@ def db_register(sid,name,email,age,sex,branch):
 #login= "viks"
 #uid= 10
     
-    q=cur.execute("insert into students VALUES('%s','%s','%s','%d','%s','%s')"%(sid,name,email,age,sex,branch))
+    cur.execute("insert into students VALUES('%s','%s','%s','%d','%s','%s')"%(sid,name,email,age,sex,branch))
+    con.commit()
 #cur.execute("INSERT INTO users(login,uid)""VALUES(%s,%d)",("viks",10))
 #cur.execute(sql)
    # import pdb
@@ -24,4 +25,4 @@ def db_register(sid,name,email,age,sex,branch):
 #cur.execute("UPDATE users SET uid=45 WHERE uid=40")
 #con.commit()
 #cur.execute("INSERT INTO users(login,uid)""VALUES(%s,%s)",("viks","10"))
-    cur.close()
+    cur.close()"""

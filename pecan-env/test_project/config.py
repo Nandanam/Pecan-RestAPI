@@ -17,14 +17,21 @@ app = {
     }
 }
 
-sqlalchemy = {
-	'url'	:'mysql+mysqldb://root:root@localhost/university?charset=utf8&use_unicode=0',
-	#'url'   : 'sqlite:///localhost',
-        'echo'  : False,
-	'echo_pool': False,
-	'pool_recycle' : 3600,
-	'encoding'	: 'utf-8'
+MySQLdb = {
+         'url' : 'mysql+mysqldb://root:root@localhost/uni300?charset=utf8&use_unicode=0',
+         'echo' : False,
+         'echo_pool' :False,
+         'pool_recycle' : 3600,
+         'encoding' : 'utf-8'
 }
+#sqlalchemy = {
+	#'url'	:'mysql+mysqldb://root:root@localhost/uni300?charset=utf8&use_unicode=0',
+	#'url'   : 'sqlite:///localhost',
+       # 'echo'  : False,
+	#'echo_pool': False,
+	#'pool_recycle' : 3600,
+	#'encoding'	: 'utf-8'
+#}
 
 
 logging = {
