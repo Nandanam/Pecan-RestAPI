@@ -7,7 +7,7 @@ def createDataBase():
     con = db.connect(user="root", passwd="root")
     cur = con.cursor()
     #cur.execute('DROP DATABASE uni')
-    cur.execute('CREATE DATABASE IF NOT EXISTS uni300;')
+  #  cur.execute('CREATE DATABASE IF NOT EXISTS uni300;')
     cur.execute("GRANT ALL ON uni300.* to ''@'localhost'")
     #cur.commit()
    # cur.close()

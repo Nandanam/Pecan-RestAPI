@@ -18,23 +18,15 @@ class UniversityController(rest.RestController):
 	}
 
     @expose('json')
-    def register(self,stud_name,email,age,sex,branch):
-        st=student.Student(stud_name,email,age,sex,branch)
-        sid = uuid.uuid4()
-       # import model
-       # random.shuffle(sid)
-        #session =  model.Session()
-        #session.add(st)
-        #session.commit()	
-        #session.close()
-	#pdb.set_trace()
-	model.db_register(sid,stud_name,email,age,sex,branch)
-       # db.db_register(sid,stud_name,email,age,sex,branch)
-        return {'a' :'b'}
+    def register(self,sid,sname,email,age,sex,branch):
+        print "Inside register"
+        model.db_register(sid,sname,email,int(age),sex,branch)
+        print "Back to register"
+        return {'a' : 'b'}
     @expose('json')
     def give_details(self,sid):
-        model.db_select(sid)
-        return {'univ' : 'Marist'}
+        return model.db_select(sid)
+       # return model.db_select(sid) 
     @expose('json')
     def update_details(self):
         model.db_delete(sid)
