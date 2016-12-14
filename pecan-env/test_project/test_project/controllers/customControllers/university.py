@@ -18,17 +18,18 @@ class UniversityController(rest.RestController):
 	}
 
     @expose('json')
-    def register(self,sid,sname,email,age,sex,branch):
-        print "Inside register"
-        model.db_register(sid,sname,email,int(age),sex,branch)
-        print "Back to register"
-        return {'a' : 'b'}
+    def register(self,sid,sname,email,age,sex,semister):
+       # print "Inside register"
+        model.db_register(sid,sname,email,int(age),sex,semister)
+       # print "Back to register"
+        text = "Student Details Registered Sucessfully"
+        return text
     @expose('json')
     def give_details(self,sid):
         return model.db_select(sid)
        # return model.db_select(sid) 
     @expose('json')
-    def update_details(self):
+    def update_details(self,sid):
         model.db_delete(sid)
         return {'up' : 'date'}
    # fac = faculty.FacultyController()
